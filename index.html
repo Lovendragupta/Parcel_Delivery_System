@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Logistic solutions to help expand your e-commerce business on a global scale"/>
+    <title>Parcel Delivery System</title>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet"/>
+		<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@1&display=swap" rel="stylesheet">
+		<link href="css/vendors/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" 
+    integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+	</head>
+	<body>
+    <header>
+     <!--MAIN NAVIGATION-->
+      <div class="navbar-fixed">
+        <nav class="white" role="navigation">
+          <div class="nav-wrapper container black-text">
+            <a class="brand-logo" href="index.html"><span><i class="small material-icons amber-text text-accent-2"></i></span> 
+              <span class="amber-text text-accent-2">Parcel Delivery</span>
+            </a>
+            <ul class="right hide-on-med-and-down ">
+              <!--Double up the ones I want to have in both states so they do not flicker when page is refreshed-->
+              <li class="logged-in"><a href="#">What we do</a></li>
+              <li class="logged-in"><a href="#">About</a></li>
+              <li class="logged-out"><a href="register.html">Sign up</a></li>
+              <li class="logged-out"><a href="login.html"><i class="material-icons right">person</i>Log in</a></li>
+              <li class="logged-in"><a id="dashboard" href="#" >Dashboard</a></li>
+              <li class="logged-in"><a id="logout-navbar" href="#" ><i class="material-icons right">person</i>Log out</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+              <i class="material-icons black-text">menu</i>
+            </a>
+          </div>
+          <div class="progress-bar-container">
+            <div id="progress-bar"></div>
+          </div>
+        </nav>
+      </div>
+     <!--MOBILE SIDENAV-->
+      <ul id="nav-mobile" class="sidenav z-depth-2 page-footer side-nav-main">
+        <li class="bold waves-effect logged-in"><a href="#" class="collapsible-header white-text">WHAT WE DO</a></li>
+        <li class="bold waves-effect logged-out"><a href="#" class="collapsible-header white-text">WHAT WE DO</a></li>
+        <li class="bold waves-effect logged-in"><a href="#" class="collapsible-header white-text">ABOUT</a></li>
+        <li class="bold waves-effect logged-out"><a href="#" class="collapsible-header white-text">ABOUT</a></li>
+        <li class="bold waves-effect logged-out"><a href="register.html" class="collapsible-header white-text">SIGN UP</a></li>
+        <li class="bold waves-effect logged-out"><a href="login.html" class="collapsible-header white-text">LOG IN</a></li>
+        <li class="bold waves-effect logged-in"><a id="dashboard-mobile" href="#" class="collapsible-header white-text">DASHBOARD</a></li>
+        <li class="bold waves-effect logged-in"><a id="logout-sidenav" href="#" class="collapsible-header white-text">LOGOUT</a></li>		
+      </ul>
+    </header> 
+
+    <main>
+      <section>
+        <!--LOGIN MODAL-->
+        <div id="modal-login" class="modal modal-fixed-footer">
+          <div class="modal-content">
+            <div class="card-login-splash">
+              <div class="wrapper center-align">
+                <h3>Log in</h3>
+                <p class="center-align">Don't have an account? 
+                  <span>
+                    <a href="register.html">Sign Up</a>
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div class="card-content">
+              <form id="login-form">
+                <div class="input-field">
+                  <input id="email" type="email" class="validate" required>
+                    <label for="email">Email 
+                      <span class="asterix">*</span>
+                    </label>
+                    <span class="helper-text" data-error="Enter your email address" data-success=""></span>
+                </div>
+                <div class="input-field">
+                    <input id="password" type="password" class="validate" required>
+                      <label for="password">Password
+                        <span class="asterix">*</span>
+                      </label>
+                      <span class="helper-text" data-error="Enter your password" data-success=""></span>
+                </div>
+                <a href="#!">Forgot password?</a>
+                    <br>
+                    <br>
+                <p class="col s12">
+                  <label><input type="checkbox" /><span>Remember me</span></label>
+                </p>
+                <div class="center-align">
+                  <button class="btn amber accent-2 black-text waves-effect" type="submit">Log In</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">CLOSE</a>
+          </div>
+        </div>
+
+
+        <!--FIRST IMAGE BANNER-->
+        <div id="index-banner" class="parallax-container z-depth-3">
+          <div class="section no-pad-bot">
+            <div class="container">
+              <br>
+              <br>
+              <h1 class="header center white-text">
+                <span class="amber-text text-accent-2"></span>
+              </h1>
+              <div class="row center">
+                <h4 class="header col s12 light"> 
+                <br></h4>
+              </div>
+              <div class="row center">
+                <a href="#modal-login" id="send-parcel-button" class="btn-large waves-effect modal-trigger amber accent-2 black-text">Send Now</a>
+              </div>
+              <br>
+              <br>
+            </div>
+          </div>
+          <div class="parallax">
+            <img id="img1" src="img/first_banner.jpg" alt="Map of the world image">
+          </div>
+        </div>
+      </section>
+      
+      <section>
+        <!--  ICON SECTION   -->
+        <div class="section z-depth-5">
+          <div class="container">
+            <div class="row ">
+              <div class="col s12 m4">
+                <div class="icon-block">
+                  <h2 class="center amber-text text-accent-2">
+                    <i class="material-icons">local_shipping</i>
+                  </h2>
+                  <h5 class="center">Deliver within 24 hours</h5>
+                  <p class="light"></p>
+                </div>
+              </div>
+              <div class="col s12 m4">
+                <div class="icon-block">
+                  <h2 class="center amber-text text-accent-2">
+                    <i class="material-icons">schedule</i>
+                  </h2>
+                  <h5 class="center">Save time</h5>
+                  <p class="light"></p>
+                </div>
+              </div>
+              <div class="col s12 m4">
+                <div class="icon-block">
+                  <h2 class="center amber-text text-accent-2">
+                    <i class="material-icons">timeline</i>
+                  </h2>
+                  <h5 class="center">Escalate revenue</h5>
+                  <p class="light"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+
+      
+
+   
+    
+    <!--SCRIPTS-->
+    <!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+    <!---------------------------------------------------------------------------------->
+    <script src="js/vendors/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
