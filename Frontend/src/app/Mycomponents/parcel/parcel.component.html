@@ -1,0 +1,76 @@
+<div class="container">
+  <form #parcelForm="ngForm" (ngSubmit)="placeOrder(parcelForm.value)">
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Type of Item </label>
+      <div class="form-label">
+        <select class="form-control" required="" aria-label="select example" name="type" ngmodel="">
+          <option value="none">Select Type</option>  
+          <option value="Cake">Birthday Cake</option>
+            <option value="Electronic Accesories">Electronic Items</option>
+            <option value="Food">Food and Grocery</option>
+            <option value="Any"> Any Item</option>
+       </select>
+    </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label"
+        >Weight(gms)</label
+      >
+      <input
+        type="number"
+        ngModel
+        name="weight"
+        class="form-control"
+        id="weight"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Length(cms)</label>
+      <input
+        type="number"
+        name="length"
+        class="form-control"
+        id="exampleInputEmail1"
+        ngModel
+        aria-describedby="emailHelp"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label"
+        >Width(cms)</label
+      >
+      <input type="text" name="breadth" class="form-control" ngModel />
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label"
+        >Pickup Point</label
+      >
+      <input type="text" name="pickupAdd" class="form-control" ngModel />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Delivery Point</label>
+      <input type="text" class="form-control" ngModel name="dropAdd" />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label"
+        > Phone No</label
+      >
+      <input type="number" class="form-control" ngModel name="alternatePhone" />
+    </div>
+    <div class="mb-3">
+      <label for="mob_no" class="col-md-3 control-label">Profile Image</label>
+      <div class="col-sm-9">
+        <input
+          type="file"
+          ngModel
+          name="imageUrlVar"
+          name="imageUrlVar"
+          accept=""
+        />
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+  </form>
+</div>
