@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">OrderId</th>
+        <!-- <th scope="col">email</th> -->
+        <th scope="col">Type</th>
+        <th scope="col">Weight</th>
+        <th scope="col">Length</th>
+        <th scope="col">Breadth</th>
+        <th scope="col">Pickup Point</th>
+        <th scope="col">Drop Point</th>
+        <th scope="col">Phone No</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let us of readData">
+        <th scope="row">{{ us.id }}</th>
+        <!-- <td>{{ us.email }}</td> -->
+        <td>{{ us.type }}</td>
+        <td>{{ us.weight }}</td>
+        <td>{{ us.length }}</td>
+        <td>{{ us.breadth }}</td>
+        <td>{{ us.pickupAdd }}</td>
+        <td>{{ us.dropAdd }}</td>
+        <td>{{ us.alternatePhone }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
